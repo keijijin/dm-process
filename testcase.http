@@ -1,0 +1,46 @@
+POST http://localhost:8099/rest/server/containers/dm-process-kjar-1_0-SNAPSHOT/processes/dm-process-kjar.dm-process/instances
+Accept: application/json
+Content-Type: application/json
+
+{
+    "message": { 
+        "status": 0,
+        "message": "Hello World!" 
+    }
+}
+
+###
+GET http://localhost:8099/rest/server/containers
+Authorization: Basic user:user
+Accept: application/json
+
+###
+GET http://localhost:8099/rest/server/containers/dm-process-kjar-1_0-SNAPSHOT/processes
+Authorization: Basic user:user
+Accept: application/json
+
+###
+POST http://localhost:8080/kie-server/services/rest/server/containers/dm-process-kjar_1.0-SNAPSHOT/processes/dm-process-kjar.dm-process/instances
+Authorization: Basic rhpamAdmin:redhat1!
+Accept: application/json
+Content-type: application/json
+
+{
+    "message": { 
+        "status": 0,
+        "message": "Hello World!" 
+    }
+}
+
+###
+POST http://localhost:8080/kie-server/services/rest/server/containers/rest-process_1.0.0-SNAPSHOT/processes/rest-process.rectcall/instances
+Authorization: Basic rhpamAdmin:redhat1!
+Accept: application/json
+Content-type: application/json
+
+{
+    "message": { 
+        "status": 0,
+        "message": "Hello World!" 
+    }
+}
